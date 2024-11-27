@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/logo img.jpg" />
+    <title>Autograde</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/navsid.css" />
+    <link rel="stylesheet" href="./css/autograde.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-logo">
+          <img src="./img/logo img.jpg" /> AUTOGRADE
+        </div>
+        <ul class="navbar-menu">
+          <li class="navbar-item dropdown">
+            <button class="dropdown-toggle">Account</button>
+            <div class="dropdown-menu">
+              <a href="./profile.html">My Profile</a>
+              <a href="./login.html">Logout</a>
+            </div>
+          </li>
+          <li class="navbar-item profile">
+            <img src="./img/profile img.webp" alt="User Profile" />
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="area"></div>
+    <nav class="main-menu">
+      <ul>
+        <li>
+          <a href="./home.html">
+            <i class="fa fa-home fa-2x"></i>
+            <span class="nav-text"> HOME </span>
+          </a>
+        </li>
+        <li class="has-subnav">
+          <a href="./index.html">
+            <i class="fa fa-table-columns fa-2x"></i>
+            <span class="nav-text"> DASHBOARD </span>
+          </a>
+        </li>
+        <li class="has-subnav">
+          <a href="./autograde.html">
+            <i class="fa fa-chart-simple fa-2x"></i>
+            <span class="nav-text"> GRADING </span>
+          </a>
+        </li>
+        <li class="has-subnav">
+          <a href="./studentdetail.html">
+            <i class="fa fa-circle-info fa-2x"></i>
+            <span class="nav-text"> STUDENT-DETAIL </span>
+          </a>
+        </li>
+        <li>
+          <a href="./help.html">
+            <i class="fa fa-question fa-2x"></i>
+            <span class="nav-text"> HELP </span>
+          </a>
+        </li>
+        <li>
+          <a href="./profile.html">
+            <i class="fa fa-user fa-2x"></i>
+            <span class="nav-text"> PROFILE </span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="logout">
+        <li>
+          <a href="./login.html">
+            <i class="fa fa-power-off fa-2x"></i>
+            <span class="nav-text"> Logout </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="board">
+      <h1>Calculate Grade</h1>
+      <form id="grade-form">
+        <label for="student-name">Student Name:</label>
+        <input type="text" id="student-name" name="student-name" required />
+
+        <label for="year">Year:</label>
+        <select id="year" name="year" required>
+          <option value="">--Please choose a year--</option>
+          <option value="1">1st Year</option>
+          <option value="2">2nd Year</option>
+          <option value="3">3rd Year</option>
+          <option value="4">4th Year</option>
+        </select>
+
+        <label for="semester">Semester:</label>
+        <select id="semester" name="semester" required disabled>
+          <option value="">--Please choose a semester--</option>
+        </select>
+
+        <label for="assignment-name">Assignment Name:</label>
+        <select id="assignment-name" name="assignment-name" required disabled>
+          <option value="">--Please choose an Assignment--</option>
+        </select>
+
+        <label for="score">Score:</label>
+        <input
+          type="number"
+          id="score"
+          name="score"
+          min="10"
+          max="100"
+          required
+        />
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+      <div id="result"></div>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2024 Autograde. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>Snehagupta28102003@gmail.com</p>
+      </div>
+    </footer>
+    <script src="./js/autograde.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

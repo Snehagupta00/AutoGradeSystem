@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap");
+
+:root {
+  --primary-color: #111827;
+  --secondary-color: #253047;
+  --accent-color: #594ef7;
+  --text-color: #444a53;
+  --text-light: #828997;
+  --background-color: #e5e7eb;
+  --white: #ffffff;
+}
+
+body {
+  background: var(--background-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-content {
+  padding: 20px;
+  margin-left: 150px;
+  transition: margin-left 0.3s ease;
+  justify-content: center;
+  align-items: center;
+}
+
+.i-name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 50px;
+  background-color: #000000;
+  border-radius: 20px;
+  height: 40px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  display: flex;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.values {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  padding: 2rem;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.values .val-box {
+  width: 250px;
+  height: 250px;
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.values .val-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.values .val-box i {
+  font-size: 48px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 50%;
+  color: black;
+}
+
+.values .val-box div {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+#total-students,
+#Graphic-Details {
+  text-align: center;
+  justify-items: center;
+}
+
+.values .val-box h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.main-menu li a {
+  font-size: 10px !important;
+}
+
+.dashboard-card {
+  margin-left: 150px;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin: 1rem auto;
+  width: 950px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.chart-container {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  max-width: 700px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chart-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+#total-students {
+  text-align: center;
+  padding: 10px;
+  margin: 10px 0;
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media (max-width: 1440px) {
+  .dashboard-content {
+    margin-left: 100px;
+  }
+
+  .values .val-box {
+    flex: 1 1 calc(50% - 1rem);
+    min-width: 220px;
+  }
+
+  .dashboard-card {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+
+@media (max-width: 1080px) {
+  .dashboard-content {
+    margin-left: 80px;
+  }
+
+  .values .val-box {
+    flex: 1 1 calc(50% - 1rem);
+    min-width: 200px;
+  }
+
+  .chart-container {
+    height: 250px;
+  }
+
+  .dashboard-card {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    margin-left: 20px;
+    padding: 10px;
+  }
+
+  .i-name {
+    font-size: 20px;
+    margin-top: 30px;
+    height: 50px;
+  }
+
+  .values {
+    padding: 15px;
+    gap: 0.5rem;
+  }
+
+  .values .val-box {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .values .val-box i {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+  }
+
+  .values .val-box h3 {
+    font-size: 16px;
+  }
+
+  .values .val-box span {
+    font-size: 14px;
+  }
+
+  .dashboard-card {
+    margin: 15px;
+    padding: 15px;
+    width: auto;
+  }
+
+  .chart-container {
+    height: 200px;
+  }
+
+  #total-students {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-content {
+    margin-left: 10px;
+    padding-top: 48px;
+    margin-left: 14%;
+  }
+
+  .i-name {
+    font-size: 18px;
+    margin-top: 20px;
+    height: 40px;
+  }
+
+  .values {
+    padding: 10px;
+    gap: 0.25rem;
+  }
+
+  .values .val-box {
+    flex: 1 1 100%;
+    min-width: 100%;
+    padding: 10px;
+  }
+
+  .values .val-box i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+  }
+
+  .values .val-box h3 {
+    font-size: 14px;
+  }
+
+  .values .val-box span {
+    font-size: 12px;
+  }
+
+  .dashboard-card {
+    margin: 10px;
+    padding: 10px;
+    width: auto;
+  }
+
+  .chart-container {
+    height: 150px;
+  }
+
+  #total-students {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  .dashboard-content {
+    margin-left: 5px;
+    padding: 3px;
+  }
+
+  .i-name {
+    font-size: 16px;
+    height: 35px;
+  }
+
+  .values .val-box {
+    padding: 8px;
+  }
+
+  .values .val-box i {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+  }
+
+  .values .val-box h3 {
+    font-size: 12px;
+  }
+
+  .values .val-box span {
+    font-size: 10px;
+  }
+}
+
