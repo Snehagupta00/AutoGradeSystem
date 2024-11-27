@@ -239,7 +239,7 @@ nav.main-menu li.active > a,
 }
 /* Profile styles */
 .profile {
-  display: flex;
+  display: none;
   align-items: center;
   margin-left: 1rem;
 }
