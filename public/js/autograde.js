@@ -93,13 +93,16 @@ function updateAssignments() {
 
 const addStudent = async (student) => {
   try {
-    const res = await fetch("http://localhost:3000/student/create-student", {
-      headers: {
-        "Content-type": "application/json",
-      },
-      method: "POST",
-      body: JSON.stringify(student),
-    });
+    const res = await fetch(
+      "https://autogradesystem.onrender.com/student/create-student",
+      {
+        headers: {
+          "Content-type": "application/json",
+        },
+        method: "POST",
+        body: JSON.stringify(student),
+      }
+    );
 
     const data = await res.json();
     console.log(data);

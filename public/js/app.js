@@ -99,7 +99,7 @@ $(document).ready(function () {
     while (retries < MAX_RETRIES) {
       try {
         const response = await fetch(
-          "http://localhost:3000/student/get-students",
+          "https://autogradesystem.onrender.com/student/get-students",
           {
             credentials: "include",
             headers: {

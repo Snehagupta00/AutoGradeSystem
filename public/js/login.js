@@ -87,10 +87,13 @@ const handleSignIn = async (e) => {
 
   try {
     error.textContent = "";
-    const data = await API.makeAuthRequest("http://localhost:3000/auth/login", {
-      email: email.value.trim(),
-      password: password.value,
-    });
+    const data = await API.makeAuthRequest(
+      "https://autogradesystem.onrender.com/auth/login",
+      {
+        email: email.value.trim(),
+        password: password.value,
+      }
+    );
     localStorage.setItem("user-info", JSON.stringify(data));
     window.location.href = "/home.html";
   } catch (err) {
@@ -104,7 +107,7 @@ const handleSignUp = async (e) => {
   try {
     error.textContent = "";
     const data = await API.makeAuthRequest(
-      "http://localhost:3000/auth/register",
+      "https://autogradesystem.onrender.com/auth/register",
       {
         fullname: fullName.value.trim(),
         email: email.value.trim(),

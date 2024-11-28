@@ -7,7 +7,9 @@ let studentsData = [];
 
 const fetchStudentData = async () => {
   try {
-    const response = await fetch("http://localhost:3000/student/get-students");
+    const response = await fetch(
+      "https://autogradesystem.onrender.com/student/get-students"
+    );
     const data = await response.json();
     console.log(data);
 
@@ -108,7 +110,7 @@ const updateStudent = async (e) => {
 
   try {
     const response = await fetch(
-      `http://localhost:3000/student/update-student/${studentId}`,
+      `https://autogradesystem.onrender.com/student/update-student/${studentId}`,
       {
         method: "PUT",
         headers: {
@@ -133,7 +135,7 @@ const deleteStudent = async (studentId) => {
   if (confirm("Are you sure you want to delete this student?")) {
     try {
       const response = await fetch(
-        `http://localhost:3000/student/delete-student/${studentId}`,
+        `https://autogradesystem.onrender.com/student/delete-student/${studentId}`,
         {
           method: "DELETE",
         }
