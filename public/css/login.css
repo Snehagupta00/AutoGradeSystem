@@ -121,14 +121,13 @@ form.sign-in-form {
 }
 
 .social-text {
-  display: none;
   padding: 0.7rem 0;
   font-size: 1rem;
   color: #444;
 }
 
 .social-media {
-  display: none;
+  display: flex;
   justify-content: center;
   margin-top: 0.5rem;
 }

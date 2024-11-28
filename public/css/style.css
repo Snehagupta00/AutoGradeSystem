@@ -51,7 +51,7 @@ body {
 }
 
 .values .val-box {
-  width: 250px;
+  width: 500px;
   height: 250px;
   border: 1px solid gray;
   display: flex;
@@ -87,6 +87,19 @@ body {
 #Graphic-Details {
   text-align: center;
   justify-items: center;
+  font-size: 20px;
+  color: #333;
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#total-students:hover,
+#Graphic-Details:hover {
+  background-color: #eaeaea;
+  cursor: pointer;
 }
 
 .values .val-box h3 {

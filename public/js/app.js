@@ -207,7 +207,7 @@ $(document).ready(function () {
 
   function updateGraphicDetails(total) {
     const graphicDetailsElement = document.getElementById("Graphic-Details");
-    graphicDetailsElement.textContent = `Graphic Detail: ${total}`;
+    graphicDetailsElement.textContent = `Graphic Details: ${total}`;
   }
 
   fetchStudentData().then(() => {
