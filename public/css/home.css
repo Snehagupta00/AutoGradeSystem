@@ -1,41 +1,67 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap");
-
 .container {
-  display: grid;
-  place-content: center;
-  min-height: 100vh;
-  background: url("https://images.unsplash.com/photo-1533134486753-c833f0ed4866?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-size: cover;
-  font-family: "Barlow Semi Condensed", sans-serif;
-  box-sizing: border-box;
-  position: relative;
-  left: 8px;
-  top: 8px;
- 
- 
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background: url("https://images.unsplash.com/photo-1533134486753-c833f0ed4866?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    left: 8px;
+    top: 8px;
 }
 
 .container .wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 3em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
 }
 
 .container .wrapper a {
-  font-size: 6em;
-  text-decoration: none;
-  text-align: center;
-  text-transform: uppercase;
-  line-height: 1;
-  color: transparent;
-  -webkit-text-stroke: 1.5px yellow;
-  text-shadow: 0 0 0 #fff;
-  transition: all 250ms;
+    font-size: 6em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1.5px yellow;
+    text-shadow: 0 0 0 #fff;
+    transition: all 250ms;
 }
 
 .container .wrapper a:hover {
-  text-shadow: 4px 4px 0 #fff;
-  transform: translate(-2px, -2px);
+    text-shadow: 4px 4px 0 #fff;
+    transform: translate(-2px, -2px);
+}
+
+
+/* Media Queries for Mobile Devices */
+
+@media screen and (max-width: 768px) {
+    .container {
+        left: 0;
+        top: 0;
+        padding: 20px;
+    }
+    .container .wrapper {
+        gap: 2em;
+    }
+    .container .wrapper a {
+        font-size: 3em;
+        -webkit-text-stroke: 1px yellow;
+    }
+    .container .wrapper a:hover {
+        text-shadow: 2px 2px 0 #fff;
+        transform: translate(-1px, -1px);
+    }
+}
+
+
+/* For very small screens */
+
+@media screen and (max-width: 480px) {
+    .container .wrapper a {
+        font-size: 2.5em;
+    }
 }
