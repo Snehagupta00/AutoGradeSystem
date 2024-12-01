@@ -12,23 +12,19 @@ connectToMongo();
 const app = express();
 const port = process.env.PORT || 3000;
 
+// Middlewares
 app.use(cors({ origin: "*" }));
 app.use(express.static(path.join(__dirname, "../public")));
 app.use(express.json());
 
-app.use("/", router);
+// Routes
+app.use("/", router); 
 app.use("/auth", authRoutes);
 app.use("/student", studentRoutes);
 
-app
-  .listen(port, "0.0.0.0", () => {
+// Start server
+app.listen(port, "0.0.0.0", () => {
     console.log(`Server started at http://localhost:${port}`);
-  })
-  .on("error", (err) => {
+}).on("error", (err) => {
     console.error("Error starting server:", err);
-  });
-
-app.use("/", (req, res) => {
-  console.log("Root route hit");
-  res.send("Server is running!");
 });
